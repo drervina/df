@@ -47,14 +47,14 @@ public class DbClass extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_TIME, df.getAdf_time());
-        values.put(KEY_DATE, df.getAdf_date());
-        values.put(KEY_TITLE, df.getAdf_title());
-        values.put(KEY_DESC, df.getAdf_desc());
-        values.put(KEY_OTHER, df.getAdf_other());
-        values.put(KEY_NEXT, df.getAdf_next());
-        values.put(KEY_SUBJECT, df.getAdf_subject());
-        values.put(KEY_MARKED, df.getAdf_marked());
+        values.put(KEY_TIME, df.getField_time());
+        values.put(KEY_DATE, df.getField_date());
+        values.put(KEY_TITLE, df.getField_title());
+        values.put(KEY_DESC, df.getField_desc());
+        values.put(KEY_OTHER, df.getField_other());
+        values.put(KEY_NEXT, df.getField_next());
+        values.put(KEY_SUBJECT, df.getField_subject());
+        values.put(KEY_MARKED, df.getField_marked());
 
 
         // Inserting Row
@@ -103,15 +103,15 @@ public class DbClass extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 DF contact = new DF();
-                contact.setAdf_id(cursor.getInt(0));
-                contact.setAdf_time(cursor.getInt(1));
-                contact.setAdf_date(cursor.getInt(2));
-                contact.setAdf_title(cursor.getString(3));
-                contact.setAdf_desc(cursor.getString(4));
-                contact.setAdf_other(cursor.getString(5));
-                contact.setAdf_next(cursor.getInt(6));
-                contact.setAdf_subject(cursor.getString(7));
-                contact.setAdf_marked(cursor.getInt(8));
+                contact.setField_id(cursor.getInt(0));
+                contact.setField_time(cursor.getInt(1));
+                contact.setField_date(cursor.getInt(2));
+                contact.setField_title(cursor.getString(3));
+                contact.setField_desc(cursor.getString(4));
+                contact.setField_other(cursor.getString(5));
+                contact.setField_next(cursor.getInt(6));
+                contact.setField_subject(cursor.getString(7));
+                contact.setField_marked(cursor.getInt(8));
 
 
                 entryList.add(contact);
@@ -125,23 +125,23 @@ public class DbClass extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_TIME, df.getAdf_time());
-        values.put(KEY_DATE, df.getAdf_date());
-        values.put(KEY_TITLE, df.getAdf_title());
-        values.put(KEY_DESC, df.getAdf_desc());
-        values.put(KEY_OTHER, df.getAdf_other());
-        values.put(KEY_NEXT, df.getAdf_next());
-        values.put(KEY_SUBJECT, df.getAdf_subject());
-        values.put(KEY_MARKED, df.getAdf_marked());
+        values.put(KEY_TIME, df.getField_time());
+        values.put(KEY_DATE, df.getField_date());
+        values.put(KEY_TITLE, df.getField_title());
+        values.put(KEY_DESC, df.getField_desc());
+        values.put(KEY_OTHER, df.getField_other());
+        values.put(KEY_NEXT, df.getField_next());
+        values.put(KEY_SUBJECT, df.getField_subject());
+        values.put(KEY_MARKED, df.getField_marked());
 
 
         return db.update(TABLE_NAME, values, KEY_ID + " = ?",
-                new String[] { String.valueOf(df.getAdf_id()) });
+                new String[] { String.valueOf(df.getField_id()) });
     }
     public void deleteEntry(DF df) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, KEY_ID + " = ?",
-                new String[] { String.valueOf(df.getAdf_id()) });
+                new String[] { String.valueOf(df.getField_id()) });
         db.close();
     }
 

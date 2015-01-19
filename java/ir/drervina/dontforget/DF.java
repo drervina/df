@@ -3,15 +3,15 @@ package ir.drervina.dontforget;
 
 public class DF {
 
-    int adf_id;
-    int adf_time;
-    int adf_date;
-    String adf_title;
-    String adf_desc;
-    String adf_other;
-    int adf_next;
-    String adf_subject;
-    int adf_marked;
+    int field_id;
+    int field_time;
+    int field_date;
+    String field_title;
+    String field_desc;
+    String field_other;
+    int field_next;
+    String field_subject;
+    int field_marked;
 
 
     public DF(){
@@ -28,104 +28,104 @@ public class DF {
             int df_next,
             String df_subject
           ,int df_marked ){
-        this.adf_date=df_date;
-        this.adf_desc=df_desc;
-        this.adf_time=df_time;
-        this.adf_other=df_other;
-        this.adf_title=df_title;
-        this.adf_next=df_next;
-        this.adf_subject=df_subject;
-        this.adf_marked=df_marked;
+        this.field_date =df_date;
+        this.field_desc =df_desc;
+        this.field_time =df_time;
+        this.field_other =df_other;
+        this.field_title =df_title;
+        this.field_next =df_next;
+        this.field_subject =df_subject;
+        this.field_marked =df_marked;
 
     }
 
-    public void setAdf_marked(int adf_marked) {
-        this.adf_marked = adf_marked;
+    public void setField_marked(int field_marked) {
+        this.field_marked = field_marked;
     }
 
-    public void setAdf_subject(String adf_subject) {
+    public void setField_subject(String field_subject) {
 
-        this.adf_subject = adf_subject;
+        this.field_subject = field_subject;
     }
 
-    public void setAdf_next(int adf_next) {
+    public void setField_next(int field_next) {
 
-        this.adf_next = adf_next;
+        this.field_next = field_next;
     }
 
-    public int getAdf_marked() {
+    public int getField_marked() {
 
-        return adf_marked;
+        return field_marked;
     }
 
-    public String getAdf_subject() {
+    public String getField_subject() {
 
-        return adf_subject;
+        return field_subject;
     }
 
-    public int getAdf_next() {
+    public int getField_next() {
 
-        return adf_next;
+        return field_next;
     }
 
 
-    public void setAdf_other(String adf_other) {
-        this.adf_other = adf_other;
+    public void setField_other(String field_other) {
+        this.field_other = field_other;
     }
 
-    public void setAdf_desc(String adf_desc) {
+    public void setField_desc(String field_desc) {
 
-        this.adf_desc = adf_desc;
+        this.field_desc = field_desc;
     }
 
-    public void setAdf_title(String adf_title) {
+    public void setField_title(String field_title) {
 
-        this.adf_title = adf_title;
+        this.field_title = field_title;
     }
 
-    public void setAdf_date(int adf_date) {
+    public void setField_date(int field_date) {
 
-        this.adf_date = adf_date;
+        this.field_date = field_date;
     }
 
-    public void setAdf_time(int adf_time) {
+    public void setField_time(int field_time) {
 
-        this.adf_time = adf_time;
+        this.field_time = field_time;
     }
 
-    public void setAdf_id(int adf_id) {
+    public void setField_id(int field_id) {
 
-        this.adf_id = adf_id;
+        this.field_id = field_id;
     }
 
-    public String getAdf_desc() {
+    public String getField_desc() {
 
-        return adf_desc;
+        return field_desc;
     }
 
-    public String getAdf_title() {
+    public String getField_title() {
 
-        return adf_title;
+        return field_title;
     }
 
-    public int getAdf_date() {
+    public int getField_date() {
 
-        return adf_date;
+        return field_date;
     }
 
-    public int getAdf_time() {
+    public int getField_time() {
 
-        return adf_time;
+        return field_time;
     }
 
-    public int getAdf_id() {
+    public int getField_id() {
 
-        return adf_id;
+        return field_id;
     }
 
-    public String getAdf_other() {
+    public String getField_other() {
 
-        return adf_other;
+        return field_other;
     }
 
 
